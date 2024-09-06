@@ -11,8 +11,9 @@
   padding-top: 40px;
   padding-right: 15px;
   width: 100%;
-  height: auto;
+  height: 994px;
   flex-direction: column;
+  gap: 24px;
   &__top {
     width: 100%;
     display: flex;
@@ -172,75 +173,198 @@
       height: 560px;
       border-radius: 8px;
       background-color: white;
-      &__top{
+      &__top {
         display: flex;
         justify-content: space-between;
         gap: 13 px;
         width: 638px;
         height: 232px;
-        &__left{
+        &__left {
           width: 232px;
           height: 232px;
         }
-        &__right{
+        &__right {
           width: 358px;
           height: 232px;
           display: flex;
           flex-direction: column;
           gap: 12px;
-          &__item{
+          &__item {
             width: 358px;
             height: 110px;
-            background-color: #F2F7FF;
+            background-color: #f2f7ff;
             border-radius: 8px;
           }
         }
       }
-      &__bottom{
+      &__bottom {
         display: flex;
         flex-direction: column;
-        width:638px;
+        width: 638px;
         height: 124px;
         border-radius: 12px;
-        border: 1px solid #F2F7FF;
+        border: 1px solid #f2f7ff;
         padding: 16px;
         gap: 8px;
-        &__top{
+        &__top {
           display: flex;
           align-items: center;
           width: 182px;
           height: 24px;
-          background-color: #F2F7FF;
+          background-color: #f2f7ff;
           color: #0065fd;
           border-radius: 16px;
           padding: 4px 12px;
           display: flex;
           gap: 8px;
-          p{
+          p {
             font-size: 12px;
           }
-          img{
+          img {
             width: 16px;
             height: 16px;
           }
         }
-        &__bottom{
+        &__bottom {
           display: flex;
           gap: 12px;
           width: 606px;
           height: 60px;
-          &__item{
+          &__item {
             width: 297px;
             height: 60px;
-            background-color: #F2F7FF;
+            background-color: #f2f7ff;
             border-radius: 8px;
             padding: 8px 12px;
+            display: flex;
+            align-items: start;
+            justify-content: start;
+            gap: 6px;
+            flex-direction: column;
+            p {
+              font-size: 12px;
+            }
+            span {
+              font-size: 20px;
+              font-weight: 500;
+            }
           }
         }
       }
     }
   }
-  
+  &__bottom {
+    width: 1160px;
+    height: 228px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    background-color: white;
+    margin: 20px 15px;
+    border-radius: 12px;
+    padding: 16px;
+    &__left {
+      width: 185px;
+      height: 196px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      &__green {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        padding: 12px;
+        width: 185px;
+        gap: 12px;
+        height: 92px;
+        border-radius: 12px;
+        background-color: #f2fff8;
+        &__left{
+          img{
+            width: 44px;
+            height: 44px;
+          }
+        }
+        &__right{
+          p{
+            font-size: 12px;
+          }
+        }
+      }
+      &__red {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        padding: 12px;
+        width: 185px;
+        height: 92px;
+        border-radius: 12px;
+        background-color: #FFF2F2;
+        &__left{
+          img{
+            width: 44px;
+            height: 44px;
+          }
+        }
+        &__right{
+          p{
+            font-size: 12px;
+          }
+        }
+      }
+    }
+    &__right {
+      width: 1054px;
+      height: 196px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: start;
+      justify-content: center;
+      gap: 10px;
+      row-gap: 12px;
+      &__item {
+        display: flex;
+        align-items: end;
+        justify-content: space-between;
+        width: 460px;
+        border-radius: 8px;
+        height: 92px;
+        background-color: #f2f7ff;
+        padding: 12px;
+        &__1{
+          text-align: start;
+          line-height: 24px;
+          h4{
+            font-size: 16px;
+            font-weight: 400;
+          }
+          p{
+            font-size: 12px;
+          }
+          span{
+            font-size: 16px;
+          }
+        }
+        &__2{
+          text-align: right;
+          line-height: 24px;
+          p{
+            font-size: 12px;
+          }
+        }
+        &__3{
+          text-align: right;
+          line-height: 24px;
+          p{
+            font-size: 12px;
+          }
+        }
+
+        
+      }
+    }
+  }
 }
 
 .MuiFormControl-root {
@@ -291,24 +415,76 @@
       line-height: 40px;
     }
 
-
-
     &:nth-child(6) {
-      background-color: #FFF1FD;
+      background-color: #fff1fd;
     }
   }
 }
 .dashboard__card__value__currency {
   display: flex;
-  align-items: baseline; 
-  justify-content: center; 
+  align-items: baseline;
+  justify-content: center;
   gap: 5px;
-  
+
   .value {
-    font-size: 28px; 
+    font-size: 28px;
   }
 
   .currency {
-    font-size: 16px; 
+    font-size: 16px;
+  }
+}
+.dashboard__middle__right__top__right__item {
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  gap: 12px;
+  p {
+    font-size: 12px;
+    line-height: 16px;
+  }
+  .pricevalue {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+  }
+}
+.price {
+  font-size: 28px;
+  font-family: "Lato", sans-serif;
+}
+.money {
+  font-size: 15px;
+  font-family: "Lato", sans-serif;
+}
+.pricevalues {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  span {
+    &:first-child {
+      font-size: 20px;
+    }
+    &:nth-child(2) {
+      font-size: 12px;
+    }
+  }
+}
+.pricevaluess {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  p{
+  font-size: 12px;
+  }
+  span {
+    &:first-child {
+      font-size: 20px;
+    }
+    &:nth-child(2) {
+      font-size: 14px;
+    }
   }
 }
