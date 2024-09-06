@@ -1,0 +1,314 @@
+.dashboard {
+  fieldset {
+    border: none;
+  }
+}
+.dashboard {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 255px;
+  padding-top: 40px;
+  padding-right: 15px;
+  width: 100%;
+  height: auto;
+  flex-direction: column;
+  &__top {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &__left {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .MuiFormControl-root {
+        display: flex;
+        border: none;
+        background-color: #ffffff;
+        width: 149px;
+        border-radius: 8px;
+        .MuiInputLabel-root {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 10px;
+          border: none;
+          color: black;
+        }
+        .MuiSelect-root {
+          border: none;
+          .MuiSelect-icon {
+            color: #666;
+          }
+        }
+      }
+    }
+
+    &__right {
+      width: 242px;
+      height: 40px;
+      background-color: #f2f7ff;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      color: #0065fd;
+    }
+  }
+  &__middle {
+    padding-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 560px;
+    &__left {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 20px;
+      width: 470px;
+      height: 560px;
+      border-radius: 8px;
+
+      &__up {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        padding: 16px;
+        width: 470px;
+        height: 208px;
+        background-color: white;
+        border-radius: 8px;
+        &__top {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          width: 438px;
+          height: 96px;
+          &__left {
+            width: 195px;
+            height: 96px;
+            background-color: white;
+            padding: 12px;
+
+            p {
+              font-size: 12px;
+              line-height: 16px;
+            }
+            h1 {
+              font-size: 40px;
+              font-weight: 600;
+              width: 250px;
+              height: 56px;
+            }
+          }
+          &__right {
+            padding: 12px;
+            width: 150px;
+            height: 96px;
+            background-color: #fdf3f3;
+            border-radius: 8px;
+            text-align: end;
+            p {
+              font-size: 12px;
+              line-height: 16px;
+            }
+            h1 {
+              font-size: 40px;
+              font-weight: 600;
+            }
+          }
+        }
+        &__bottom {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: 8px;
+          width: 438px;
+          height: 68px;
+          &__item {
+            display: flex;
+            align-items: start;
+            gap: 8px;
+            flex-direction: column;
+            padding: 12px;
+            text-align: start;
+            width: 138px;
+            height: 68px;
+            background-color: #f2f7ff;
+            border-radius: 8px;
+            p {
+              font-size: 12px;
+            }
+            span {
+              font-size: 20px;
+              line-height: 28px;
+            }
+          }
+        }
+      }
+      &__down {
+        width: 470px;
+        height: 328px;
+        border-radius: 8px;
+        background-color: white;
+        &__item {
+        }
+      }
+    }
+    &__right {
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 16px;
+      border-radius: 12px;
+      width: 670px;
+      height: 560px;
+      border-radius: 8px;
+      background-color: white;
+      &__top{
+        display: flex;
+        justify-content: space-between;
+        gap: 13 px;
+        width: 638px;
+        height: 232px;
+        &__left{
+          width: 232px;
+          height: 232px;
+        }
+        &__right{
+          width: 358px;
+          height: 232px;
+          display: flex;
+          flex-direction: column;
+          gap: 12px;
+          &__item{
+            width: 358px;
+            height: 110px;
+            background-color: #F2F7FF;
+            border-radius: 8px;
+          }
+        }
+      }
+      &__bottom{
+        display: flex;
+        flex-direction: column;
+        width:638px;
+        height: 124px;
+        border-radius: 12px;
+        border: 1px solid #F2F7FF;
+        padding: 16px;
+        gap: 8px;
+        &__top{
+          display: flex;
+          align-items: center;
+          width: 182px;
+          height: 24px;
+          background-color: #F2F7FF;
+          color: #0065fd;
+          border-radius: 16px;
+          padding: 4px 12px;
+          display: flex;
+          gap: 8px;
+          p{
+            font-size: 12px;
+          }
+          img{
+            width: 16px;
+            height: 16px;
+          }
+        }
+        &__bottom{
+          display: flex;
+          gap: 12px;
+          width: 606px;
+          height: 60px;
+          &__item{
+            width: 297px;
+            height: 60px;
+            background-color: #F2F7FF;
+            border-radius: 8px;
+            padding: 8px 12px;
+          }
+        }
+      }
+    }
+  }
+  
+}
+
+.MuiFormControl-root {
+  .MuiSelect-root {
+    border: none !important;
+  }
+}
+
+.dashboard__middle__left__down {
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  gap: 12px;
+  flex-direction: column;
+  padding: 16px;
+  &__title {
+    p {
+      font-size: 12px;
+      font-family: "Lato";
+      font-size: 12px;
+      line-height: 16px;
+      text-align: left;
+    }
+  }
+  &__items {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: space-between;
+  }
+
+  .dashboard__card {
+    background-color: white;
+    border-radius: 12px;
+    width: 138px;
+    height: 128px;
+    padding: 13px;
+    text-align: center;
+    border: 1px solid #f2f7ff;
+
+    &__icon {
+      font-size: 30px;
+    }
+
+    &__value {
+      font-size: 28px;
+      line-height: 40px;
+    }
+
+
+
+    &:nth-child(6) {
+      background-color: #FFF1FD;
+    }
+  }
+}
+.dashboard__card__value__currency {
+  display: flex;
+  align-items: baseline; 
+  justify-content: center; 
+  gap: 5px;
+  
+  .value {
+    font-size: 28px; 
+  }
+
+  .currency {
+    font-size: 16px; 
+  }
+}

@@ -1,25 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
+// import { RouterProvider } from 'react-router-dom';
+// import { createBrowserRouter } from 'react-router-dom';
+// import { ROUTES } from './routes/routes';
+// import "./App.css"
+// const router = createBrowserRouter(ROUTES)
 
-function App() {
+
+// function App() {
+//     return (
+//         <RouterProvider router={router} />
+//     )
+// }
+
+// export default App
+
+import React, { useState } from 'react';
+import Header from '../src/layout/Header/Header';
+import Navbar from '../src/layout/Navbar/Navbar';
+import './App.css'; 
+import Home from './pages/Home/Home';
+
+const App = () => {
+  const [isNavbarCollapsed, setIsNavbarCollapsed] = useState(false);
+
+  const handleNavbarToggle = () => {
+    setIsNavbarCollapsed(prevState => !prevState);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <Navbar 
+        onToggle={handleNavbarToggle} 
+        isNavbarCollapsed={isNavbarCollapsed} 
+      />
+      <Home/>
+      <Header isCollapsed={isNavbarCollapsed} />
     </div>
   );
-}
+};
 
 export default App;
+
