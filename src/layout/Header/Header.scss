@@ -1,3 +1,212 @@
+// .header-container {
+//   width: 240px;
+//   height: 820px;
+//   position: fixed;
+//   top: 0;
+//   z-index: 1000;
+//   background-color: white;
+//   color: #fff;
+//   display: flex;
+//   flex-direction: column;
+//   padding: 20px 15px;
+//   transition: all 0.3s ease;
+
+//   &.collapsed {
+//     width: 115px;
+//     padding: 20px 15px;
+
+//     .logo {
+//       display: flex;
+//       padding-left: 25px;
+//       align-items: center;
+//       gap: 2px;
+
+//       #logo2 {
+//         width: 33.42px;
+//         height: 35.41px;
+//       }
+
+//       #logo1 {
+//         display: none;
+//       }
+//     }
+
+//     .nav-list {
+//       display: flex;
+//       flex-direction: column;
+//       gap: 20px;
+//       width: 80px;
+//       height: calc(100% - 40px);
+//       padding: 20px 0;
+//       color: black;
+//       list-style: none;
+//       position: absolute;
+//       top: 60px;
+//     }
+
+//     .nav-item {
+//       display: flex;
+//       align-items: center;
+//       justify-content: center;
+//       width: 40px;
+//       height: 40px;
+//       padding: 8px;
+//       background-color: #FAFAFA;
+//       border-radius: 50%;
+//       gap: 4px;
+//       cursor: pointer;
+//       transition: background-color 0.3s;
+
+//       .nav-item-img {
+//         width: 24px;
+//         height: 24px;
+
+//         img {
+//           width: 100%;
+//           height: 100%;
+//           object-fit: cover;
+//         }
+//       }
+
+//       .nav-item-text {
+//         display: none;
+//         width: 25px;
+//         height: 25px;
+//       }
+
+//       &:hover {
+//         background-color: #E3F4FF;
+//         border-radius: 50%;
+//       }
+//     }
+//   }
+
+//   .logo {
+//     display: flex;
+//     padding-left: 8px;
+//     gap: 5px;
+
+//     img {
+//       width: 100%;
+//       height: 100%;
+//       object-fit: cover;
+//     }
+//   }
+
+//   #logo1 {
+//     width: 137.06px;
+//     height: 30.68px;
+//   }
+
+//   #logo2 {
+//     width: 33.42px;
+//     height: 35.41px;
+//   }
+
+//   .nav-list {
+//     display: flex;
+//     justify-content: start;
+//     align-items: center;
+//     flex-direction: column;
+//     background-color: white;
+//     gap: 20px;
+//     padding: 40px 0;
+//     color: black;
+//     width: 210px;
+//     height: 340px;
+//     list-style: none;
+//     transition: all 0.3s ease;
+//   }
+
+//   .nav-item {
+//     display: flex;
+//     align-items: center;
+//     justify-content: start;
+//     width: 210px;
+//     height: 40px;
+//     padding: 8px 12px;
+//     gap: 8px;
+//     cursor: pointer;
+//     transition: background-color 0.3s;
+
+//     .nav-item-img {
+//       width: 24px;
+//       height: 24px;
+
+//       img {
+//         object-fit: cover;
+//       }
+//     }
+
+//     .nav-item-text {
+//       font-weight: 500;
+//       font-size: 16px;
+//       line-height: 24px;
+//     }
+
+//     &:hover {
+//       background-color: #E3F4FF;
+//       border-radius: 8px;
+//     }
+//   }
+
+//   .logout-section {
+//     margin-top: auto;
+//     display: flex;
+//     align-items: center;
+//     gap: 8px;
+//     padding: 8px;
+//     cursor: pointer;
+
+//     .logout-icon {
+//       width: 18px;
+//       height: 18px;
+//     }
+
+//     .logout-text {
+//       font-weight: 500;
+//       font-size: 16px;
+//       line-height: 24px;
+//       color: black;
+//     }
+
+//     &:hover {
+//     }
+//   }
+// }
+
+// .nav-item {
+//   display: flex;
+//   align-items: center;
+//   justify-content: start;
+//   width: 210px;
+//   height: 40px;
+//   padding: 8px 12px;
+//   gap: 8px;
+//   cursor: pointer;
+//   transition: background-color 0.3s;
+
+//   .nav-item-img {
+//     width: 24px;
+//     height: 24px;
+//   }
+
+//   .nav-item-text {
+//     font-weight: 500;
+//     font-size: 16px;
+//     line-height: 24px;
+//   }
+
+//   &:hover {
+//     background-color: #E3F4FF;
+//     border-radius: 8px;
+//   }
+
+//   a {
+//     text-decoration: none;
+//     color: inherit;
+//   }
+// }
 .header-container {
   width: 240px;
   height: 820px;
@@ -60,23 +269,47 @@
       .nav-item-img {
         width: 24px;
         height: 24px;
-
-        img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-        }
       }
 
       .nav-item-text {
         display: none;
-        width: 25px;
-        height: 25px;
       }
 
       &:hover {
         background-color: #E3F4FF;
         border-radius: 50%;
+      }
+    }
+
+    .logout-section {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px;
+      cursor: pointer;
+
+      .logout-icon {
+        width: 18px;
+        height: 18px;
+        display: block; // İkon her durumda görünür
+      }
+
+      .logout-text {
+        display: none; // Kapalı durumda yazıyı gizle
+      }
+
+      &:hover {
+        background-color: #E3F4FF;
+        border-radius: 8px;
+      }
+
+      a {
+        padding: 8px;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        color: inherit;
       }
     }
   }
@@ -132,10 +365,6 @@
     .nav-item-img {
       width: 24px;
       height: 24px;
-
-      img {
-        object-fit: cover;
-      }
     }
 
     .nav-item-text {
@@ -147,6 +376,14 @@
     &:hover {
       background-color: #E3F4FF;
       border-radius: 8px;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      align-items: center;
+      gap: 8px;
     }
   }
 
@@ -171,7 +408,27 @@
     }
 
     &:hover {
+      background-color: #E3F4FF;
+      border-radius: 8px;
+    }
+
+    a {
+      padding: 8px;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: inherit;
     }
   }
 }
-
+.header-container {
+  position: fixed;
+  z-index: 1000; /* Header'ı diğer içeriklerden önde tutmak için yüksek bir z-index değeri */
+  
+  // İçerikler
+  .logout-section {
+    position: relative; /* Veya absolute, elemanın konumlandırmasını kontrol edin */
+    z-index: 1100; /* Diğer içeriklerin önünde olması için yüksek bir z-index */
+  }
+}

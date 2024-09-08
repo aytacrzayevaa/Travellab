@@ -1,42 +1,36 @@
-// import { RouterProvider } from 'react-router-dom';
-// import { createBrowserRouter } from 'react-router-dom';
-// import { ROUTES } from './routes/routes';
-// import "./App.css"
-// const router = createBrowserRouter(ROUTES)
-
-
-// function App() {
-//     return (
-//         <RouterProvider router={router} />
-//     )
-// }
-
-// export default App
-
-import React, { useState } from 'react';
+import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom'; 
 import Header from '../src/layout/Header/Header';
 import Navbar from '../src/layout/Navbar/Navbar';
 import './App.css'; 
-import Home from './pages/Home/Home';
+import Home from '../src/pages/Home/Home';  
+import { ROUTES } from '../src/routes/routes'; 
+import { NavbarProvider } from './contexts/NavbarContext'; // NavbarContext'i import et
 
 const App = () => {
-  const [isNavbarCollapsed, setIsNavbarCollapsed] = useState(false);
-
-  const handleNavbarToggle = () => {
-    setIsNavbarCollapsed(prevState => !prevState);
-  };
-
   return (
-    <div className="app">
-      <Navbar 
-        onToggle={handleNavbarToggle} 
-        isNavbarCollapsed={isNavbarCollapsed} 
-      />
-      <Home/>
-      <Header isCollapsed={isNavbarCollapsed} />
-    </div>
+    <BrowserRouter>
+      <NavbarProvider>
+        <div className="app">
+          <Header />  {/* Header tüm sayfalarda görünsün */}
+          <Navbar />
+          <Routes>
+            {ROUTES.map((route, index) => (
+              <Route key={index} path={route.path} element={route.element}>
+                {route.children?.map((childRoute, childIndex) => (
+                  <Route
+                    key={childIndex}
+                    path={childRoute.path}
+                    element={childRoute.element}
+                  />
+                ))}
+              </Route>
+            ))}
+          </Routes>
+        </div>
+      </NavbarProvider>
+    </BrowserRouter>
   );
 };
 
 export default App;
-
