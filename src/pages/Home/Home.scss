@@ -11,7 +11,7 @@
   padding-top: 40px;
   padding-right: 15px;
   width: 100%;
-  height: 994px;
+  height: 960px;
   flex-direction: column;
   gap: 24px;
   &__top {
@@ -158,8 +158,6 @@
         height: 328px;
         border-radius: 8px;
         background-color: white;
-        &__item {
-        }
       }
     }
     &__right {
@@ -276,18 +274,17 @@
         justify-content: space-around;
         padding: 12px;
         width: 185px;
-        gap: 12px;
         height: 92px;
         border-radius: 12px;
         background-color: #f2fff8;
-        &__left{
-          img{
+        &__left {
+          img {
             width: 44px;
             height: 44px;
           }
         }
-        &__right{
-          p{
+        &__right {
+          p {
             font-size: 12px;
           }
         }
@@ -300,15 +297,15 @@
         width: 185px;
         height: 92px;
         border-radius: 12px;
-        background-color: #FFF2F2;
-        &__left{
-          img{
+        background-color: #fff2f2;
+        &__left {
+          img {
             width: 44px;
             height: 44px;
           }
         }
-        &__right{
-          p{
+        &__right {
+          p {
             font-size: 12px;
           }
         }
@@ -332,36 +329,34 @@
         height: 92px;
         background-color: #f2f7ff;
         padding: 12px;
-        &__1{
+        &__1 {
           text-align: start;
           line-height: 24px;
-          h4{
+          h4 {
             font-size: 16px;
             font-weight: 400;
           }
-          p{
+          p {
             font-size: 12px;
           }
-          span{
+          span {
             font-size: 16px;
           }
         }
-        &__2{
+        &__2 {
           text-align: right;
           line-height: 24px;
-          p{
+          p {
             font-size: 12px;
           }
         }
-        &__3{
+        &__3 {
           text-align: right;
           line-height: 24px;
-          p{
+          p {
             font-size: 12px;
           }
         }
-
-        
       }
     }
   }
@@ -476,8 +471,8 @@
   display: flex;
   align-items: baseline;
   gap: 8px;
-  p{
-  font-size: 12px;
+  p {
+    font-size: 12px;
   }
   span {
     &:first-child {
@@ -485,6 +480,60 @@
     }
     &:nth-child(2) {
       font-size: 14px;
+    }
+  }
+}
+
+.dashboard {
+  &--navbar-closed {
+    padding-left: 175px;
+    padding-top: 20px;
+    width: 1395px;
+    height: 950px;
+    gap: 24px;
+    .dashboard__top {
+      width: 1295px;
+    }
+    .dashboard__middle__right {
+      &__bottom {
+        width: 763px;
+        &__bottom {
+          width: 731px;
+          &__item {
+            width: 359.5px;
+          }
+        }
+      }
+      &__top {
+        width: 763px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
+      }
+      width: 795px;
+    }
+
+    .dashboard__middle {
+      padding-top: 0;
+      width: 1295px;
+    }
+    .dashboard__bottom {
+      margin: 0;
+      width: 1295px;
+      &__left {
+        width: 185px;
+        height: 196px;
+        &__green {
+          gap: 0;
+        }
+      }
+      &__right {
+        width: 1070px;
+        &__item {
+          width: 527px;
+        }
+      }
     }
   }
 }

@@ -37,7 +37,7 @@ export const ROUTES = [
     },
     {
         path:"/users",
-        element: <Userss/>
+        element: <Users/>
     }
     ],
   },
