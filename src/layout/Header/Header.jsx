@@ -10,10 +10,11 @@ import Vector from '../../assets/ChartPieSlice.svg';
 import Message from '../../assets/Vector (2).svg';
 import UserPlus from '../../assets/UserPlus.svg';
 import LogoutIcon from '../../assets/LogOut.svg';
-import { useNavbar } from '../../context/NavbarContext'; 
+import { useNavbar } from '../../context/NavbarContext'; // Context'i import et
 
 const Header = () => {
-  const { isNavbarCollapsed } = useNavbar(); 
+  const { isNavbarCollapsed } = useNavbar(); // Context'ten navbar durumunu al
+
   return (
     <div className={`header-container ${isNavbarCollapsed ? 'collapsed' : ''}`}>
       <div className="logo">
