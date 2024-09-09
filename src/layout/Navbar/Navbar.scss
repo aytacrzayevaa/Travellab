@@ -39,3 +39,208 @@
 body {
     padding-top: 60px;
 }
+
+.navbar {
+    &__data {
+      &__left {
+        button {
+          border: none;
+          background: none;
+          transition: transform 0.3s ease; 
+        }
+        .button--moved {
+          transform: translateX(-120px); 
+        }
+      }
+    }
+  }
+  
+
+  .qrmodal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height:100%;
+    background: rgba(0, 0, 0, 0.278);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999999; // Modal en üstte olacak şekilde yüksek bir z-index değeri veriyoruz
+  &__header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__body{
+    height: 425px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    p{
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 20px;
+    }
+  }
+    &__content {
+      padding: 16px;
+      background: white;
+      padding: 20px;
+      border-radius: 16px;
+      position: relative;
+      width: 288px;
+      height: 484px;
+      text-align: center;
+      z-index: 99997; // Modal içeriği de en üstte görünecek
+    }
+  
+    &__close {
+      position: absolute;
+     
+      right: 10px;
+      width: 24px;
+      height: 24px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      z-index: 99999; // Kapatma düğmesi de üstte kalacak
+    }
+  
+    &__close-button {
+      width: 256px;
+      height: 48px;
+      margin-top: 20px;
+      padding: 12px 24px;
+      background-color: #F2F7FF;
+      color: #0065FD;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  }
+  
+  .ctmodal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.278);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999999; 
+  &__header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__body{
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    &__top{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      width: 368px;
+      height: 80px;
+      &__item{
+        width: 176px;
+        height: 80px;
+        background-color:#F2F7FF;
+        display: flex;
+        border-radius: 8px;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        p{
+          font-size: 12px;
+        }
+        h4{
+          font-size: 28px;
+          font-weight: 400;
+        }
+      }
+    }
+   
+    p{
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 20px;
+    }
+
+  }
+    &__content {
+      padding: 16px;
+      background: white;
+      padding: 20px;
+      border-radius: 16px;
+      position: relative;
+      width: 400px;
+      height: 472px;
+      text-align: center;
+      z-index: 99997; 
+    }
+  
+    &__close {
+      position: absolute;
+     
+      right: 10px;
+      width: 24px;
+      height: 24px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      z-index: 99999; 
+    }
+  
+    &__close-button {
+      width: 368px;
+      height: 48px;
+      padding: 12px 24px;
+      background-color: #F2F7FF;
+      color: #0065FD;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  }
+
+  .ctmodal__body__middle {
+    padding-top: 10px;
+
+    .input-group {
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      align-items: start;
+      margin-bottom: 1rem;
+  
+      label {
+        margin-bottom: 0.5rem;
+        font-size: 14px;
+      }
+  
+      input, select {
+        width: 368px;
+        height: 44px;
+        padding:12px;
+        border: 1px solid #99C1FE;
+        border-radius: 12px;
+      }
+      select{
+        width: 100%;
+        padding-right: 10px !important;
+      }
+    }
+  }
+
+
+  
+  
