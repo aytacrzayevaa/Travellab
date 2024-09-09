@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Header.scss';
 import Logo1 from '../../assets/Group.svg';
 import Logo2 from '../../assets/Group (1).svg';
@@ -8,45 +9,65 @@ import Cart from '../../assets/Vector.svg';
 import Vector from '../../assets/ChartPieSlice.svg';
 import Message from '../../assets/Vector (2).svg';
 import UserPlus from '../../assets/UserPlus.svg';
-import LogoutIcon from '../../assets/LogOut.svg'; 
+import LogoutIcon from '../../assets/LogOut.svg';
+import { useNavbar } from '../../context/NavbarContext'; 
 
-const Header = ({ isCollapsed }) => {
+const Header = () => {
+  const { isNavbarCollapsed } = useNavbar(); 
   return (
-    <div className={`header-container ${isCollapsed ? 'collapsed' : ''}`}>
+    <div className={`header-container ${isNavbarCollapsed ? 'collapsed' : ''}`}>
       <div className="logo">
-        <img id="logo2" src={Logo2} alt="Logo 2" className={isCollapsed ? 'hidden' : ''} />
-        <img id="logo1" src={Logo1} alt="Logo 1" />
+        <Link to="/">
+          <img id="logo2" src={Logo2} alt="Logo 2" className={isNavbarCollapsed ? 'hidden' : ''} />
+        </Link>
+        <Link to="/">
+          <img id="logo1" src={Logo1} alt="Logo 1" />
+        </Link>
       </div>
-      <ul className={`nav-list ${isCollapsed ? 'collapsed' : ''}`}>
+      <ul className={`nav-list ${isNavbarCollapsed ? 'collapsed' : ''}`}>
         <li className="nav-item">
-          <img src={House} alt="Home" className={`nav-item-img ${isCollapsed ? 'hidden' : ''}`} />
-          <span className={`nav-item-text ${isCollapsed ? 'hidden' : ''}`}>Əsas səhifə</span>
+          <Link to="/">
+            <img src={House} alt="Home" className={`nav-item-img ${isNavbarCollapsed ? 'hidden' : ''}`} />
+            <span className={`nav-item-text ${isNavbarCollapsed ? 'hidden' : ''}`}>Əsas səhifə</span>
+          </Link>
         </li>
         <li className="nav-item">
-          <img src={UsersThree} alt="Customers" className={`nav-item-img ${isCollapsed ? 'hidden' : ''}`} />
-          <span className={`nav-item-text ${isCollapsed ? 'hidden' : ''}`}>Müştərilər</span>
+          <Link to="/customers">
+            <img src={UsersThree} alt="Customers" className={`nav-item-img ${isNavbarCollapsed ? 'hidden' : ''}`} />
+            <span className={`nav-item-text ${isNavbarCollapsed ? 'hidden' : ''}`}>Müştərilər</span>
+          </Link>
         </li>
         <li className="nav-item">
-          <img src={Cart} alt="Sales" className={`nav-item-img ${isCollapsed ? 'hidden' : ''}`} />
-          <span className={`nav-item-text ${isCollapsed ? 'hidden' : ''}`}>Satışlar</span>
+          <Link to="/sales">
+            <img src={Cart} alt="Sales" className={`nav-item-img ${isNavbarCollapsed ? 'hidden' : ''}`} />
+            <span className={`nav-item-text ${isNavbarCollapsed ? 'hidden' : ''}`}>Satışlar</span>
+          </Link>
         </li>
         <li className="nav-item">
-          <img src={Vector} alt="Expenses" className={`nav-item-img ${isCollapsed ? 'hidden' : ''}`} />
-          <span className={`nav-item-text ${isCollapsed ? 'hidden' : ''}`}>Xərclər</span>
+          <Link to="/expenses">
+            <img src={Vector} alt="Expenses" className={`nav-item-img ${isNavbarCollapsed ? 'hidden' : ''}`} />
+            <span className={`nav-item-text ${isNavbarCollapsed ? 'hidden' : ''}`}>Xərclər</span>
+          </Link>
         </li>
         <li className="nav-item">
-          <img src={Message} alt="Messages" className={`nav-item-img ${isCollapsed ? 'hidden' : ''}`} />
-          <span className={`nav-item-text ${isCollapsed ? 'hidden' : ''}`}>Mesaj göndər</span>
+          <Link to="/message">
+            <img src={Message} alt="Messages" className={`nav-item-img ${isNavbarCollapsed ? 'hidden' : ''}`} />
+            <span className={`nav-item-text ${isNavbarCollapsed ? 'hidden' : ''}`}>Mesaj göndər</span>
+          </Link>
         </li>
         <li className="nav-item">
-          <img src={UserPlus} alt="Users" className={`nav-item-img ${isCollapsed ? 'hidden' : ''}`} />
-          <span className={`nav-item-text ${isCollapsed ? 'hidden' : ''}`}>İstifadəçilər</span>
+          <Link to="/users">
+            <img src={UserPlus} alt="Users" className={`nav-item-img ${isNavbarCollapsed ? 'hidden' : ''}`} />
+            <span className={`nav-item-text ${isNavbarCollapsed ? 'hidden' : ''}`}>İstifadəçilər</span>
+          </Link>
         </li>
       </ul>
 
       <div className="logout-section">
-        <img src={LogoutIcon} alt="Logout" className="logout-icon" />
-        <span className="logout-text">Çıxış</span>
+        <Link to="/logout">
+          <img src={LogoutIcon} alt="Logout" className={`logout-icon ${isNavbarCollapsed ? 'hidden' : ''}`} />
+          <span className={`logout-text ${isNavbarCollapsed ? 'hidden' : ''}`}>Çıxış</span>
+        </Link>
       </div>
     </div>
   );
