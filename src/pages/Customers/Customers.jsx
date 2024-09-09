@@ -10,7 +10,7 @@ import Modal from "../../components/FilterModal"; // Modal'ı içe aktar
 const Customers = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const { isNavbarCollapsed } = useNavbar();
+  const { isNavbarCollapsed } = useNavbar(); 
 
   const totalPages = 10;
 
