@@ -66,7 +66,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 999999; // Modal en üstte olacak şekilde yüksek bir z-index değeri veriyoruz
+    z-index: 999999;
   &__header{
     display: flex;
     align-items: center;
@@ -93,7 +93,7 @@ body {
       width: 288px;
       height: 484px;
       text-align: center;
-      z-index: 99997; // Modal içeriği de en üstte görünecek
+      z-index: 99997;
     }
   
     &__close {
@@ -105,7 +105,7 @@ body {
       background: none;
       border: none;
       cursor: pointer;
-      z-index: 99999; // Kapatma düğmesi de üstte kalacak
+      z-index: 99999; 
     }
   
     &__close-button {
@@ -242,5 +242,4 @@ body {
   }
 
 
-  
   
