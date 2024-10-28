@@ -1,0 +1,153 @@
+.sales-container {
+  width: 100%;
+  padding: 20px;
+  padding-left: 260px;
+
+  .sales-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+
+    .breadcrumb {
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+
+      .current-page {
+        color: #007bff;
+        padding-left: 5px;
+      }
+    }
+
+    .header-buttons {
+      display: flex;
+      gap: 10px;
+
+      button {
+        background: none;
+        border: none;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.sales-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background-color: #ffffff;
+
+  th,
+  td {
+    height: 50px;
+    padding: 12px 14px;
+    text-align: left;
+    border-bottom: 1px solid #dee2e6;
+
+    &:nth-child(2),
+    &:nth-child(3),
+    &:nth-child(4) {
+      width: 180px; 
+    }
+  }
+
+  th {
+    background-color: #001433;
+    color: white;
+    height: 40px;
+    font-weight: 500;
+    font-size: 14px;
+
+    &:first-child {
+      border-top-left-radius: 8px;
+      border-bottom-left-radius: 8px;
+    }
+    &:last-child {
+      border-top-right-radius: 8px;
+      border-bottom-right-radius: 8px;
+    }
+  }
+
+  tbody tr {
+    cursor: pointer;
+    position: relative;
+
+    &:hover {
+      background-color:#F2F7FF;
+      td{
+        color: #0065FD;
+      }
+    }
+
+    td {
+      color: #212529;
+      font-size: 12px;
+
+    }
+
+    .actions {
+      display: flex;
+      gap: 8px;
+
+      svg {
+        font-size: 18px;
+        color: #007bff;
+        cursor: pointer;
+
+        &:hover {
+          color: #0056b3;
+        }
+      }
+    }
+  }
+}
+
+.pagination {
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+
+  .page-btn,
+  .prev-btn,
+  .next-btn {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f1f3f5;
+    color: #0065fd;
+    border: none;
+    padding: 8px 12px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 4px;
+
+    &:hover {
+      background-color: #e2e6ea;
+    }
+  }
+
+  .active {
+    background-color: #0065fd;
+    color: white;
+  }
+
+  .ellipsis {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #6c757d;
+    font-size: 18px;
+  }
+}
+
+.sales-container {
+  &--navbar-closed {
+    padding-left: 135px;
+  }
+}

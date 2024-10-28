@@ -75,7 +75,6 @@ const Navbar = () => {
               </div>
             </div>
             <div className="ctmodal__body__middle">
-              {/* First input for "qiymet" */}
               <div className="input-group">
                 <label htmlFor="qiymet">Qiymət (AZN)</label>
                 <input

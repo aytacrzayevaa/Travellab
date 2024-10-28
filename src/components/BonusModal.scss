@@ -1,0 +1,126 @@
+.bonus-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.bonus-modal {
+  background-color: #fff;
+  padding: 16px;
+  border-radius: 10px;
+  width: 1170px;
+  height: 383px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  position: relative;
+  animation: modal-fade-in 0.3s ease;
+
+  .bonus-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+
+    h2 {
+      font-size: 24px;
+      color: #000;
+      font-weight: 400;
+    }
+    
+    .close-btn {
+      background: none;
+      border: none;
+      cursor: pointer;
+      
+    }
+  }
+
+  .bonus-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+
+    thead {
+      background-color: #001433;
+      color: #fff;
+      height: 40px;
+      font-size: 14px;
+      
+      th {
+          font-weight: 400;
+        padding: 12px;
+        text-align: left;
+        font-size: 14px;
+        &:first-child {
+            border-top-left-radius: 12px;
+            border-bottom-left-radius: 12px;
+          }
+          &:last-child {
+            border-top-right-radius: 12px;
+            border-bottom-right-radius: 12px;
+          }
+      }
+    }
+
+    tbody {
+      tr {
+        cursor: pointer; 
+        td {
+            height: 48px;
+          padding: 12px;
+          border-bottom: 1px solid #eee;
+          font-size: 12px;
+        }
+
+        .status {
+          text-align: center;
+          font-size: 16px;
+
+          .status-checked {
+            color: #00cc66;
+          }
+
+          .status-unchecked {
+            color: #bbb;
+          }
+        }
+      }
+    }
+  }
+
+  .confirm-section {
+    text-align: center;
+
+    .confirm-btn {
+      background-color: #0065FD;
+      color: #fff;
+      border: none;
+      border-radius: 12px;
+      height: 48px;
+      font-size: 16px;
+      cursor: pointer;
+      width: 100%;
+
+      &:hover {
+        background-color: #0056e3;
+      }
+    }
+  }
+}
+
+@keyframes modal-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -48,7 +48,7 @@ import Navbar from '../src/layout/Navbar/Navbar';
 import './App.css'; 
 import Home from '../src/pages/Home/Home';  
 import { ROUTES } from '../src/routes/routes'; 
-import { NavbarProvider } from './context/NavbarContext'; // NavbarContext'i import et
+import { NavbarProvider } from './context/NavbarContext'; 
 
 const App = () => {
   return (

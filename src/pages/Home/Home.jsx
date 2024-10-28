@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useNavbar } from "../../context/NavbarContext"; 
+import { useNavbar } from "../../context/NavbarContext";
 import "./Home.scss";
 import Chart from "../../assets/dashboard/Elipse.svg";
 import User from "../../assets/dashboard/UserCircle.svg";
